@@ -1,0 +1,73 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 25
+  },
+  "configurePresets": [
+    {
+      "name": "Default Debug Shared",
+      "displayName": "Default Ninja Config (shared libs)",
+      "description": "Default debug build using Ninja generator",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build_debug_shared/",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_COMPILER": "g++",
+        "BUILD_SHARED_LIBS": true
+      }
+    },
+    {
+      "name": "Default Debug Static",
+      "displayName": "Default Ninja Config",
+      "description": "Default debug build using Ninja generator",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build_debug/",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_COMPILER": "g++"
+      }
+    },
+    {
+      "name": "Default Release Shared",
+      "displayName": "Default Ninja Config (shared libs)",
+      "description": "Default debug build using Ninja generator",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build_release_shared/",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_COMPILER": "g++",
+        "BUILD_SHARED_LIBS": true
+      }
+    },
+    {
+      "name": "Default Release",
+      "displayName": "Default Ninja Config - Release, shared libs",
+      "description": "Default debug build using Ninja generator",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build_release/",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_COMPILER": "g++"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Default Debug Shared",
+      "configurePreset": "Default Debug Shared"
+    },
+    {
+      "name": "Default Debug",
+      "configurePreset": "Default Debug Static"
+    },
+    {
+      "name": "Default Release Shared",
+      "configurePreset": "Default Release Shared"
+    },
+    {
+      "name": "Default Release Static",
+      "configurePreset": "Default Release"
+    }
+  ]
+}
