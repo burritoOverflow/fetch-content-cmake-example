@@ -7,7 +7,7 @@
   "configurePresets": [
     {
       "name": "Default Debug Shared",
-      "displayName": "Default Ninja Config (shared libs)",
+      "displayName": "Default Ninja Config - Debug (shared libs)",
       "description": "Default debug build using Ninja generator",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build_debug_shared/",
@@ -19,7 +19,7 @@
     },
     {
       "name": "Default Debug Static",
-      "displayName": "Default Ninja Config",
+      "displayName": "Default Ninja Config - Debug",
       "description": "Default debug build using Ninja generator",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build_debug/",
@@ -30,8 +30,8 @@
     },
     {
       "name": "Default Release Shared",
-      "displayName": "Default Ninja Config (shared libs)",
-      "description": "Default debug build using Ninja generator",
+      "displayName": "Default Ninja Config - Release, shared libs",
+      "description": "Default release build using Ninja generator",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build_release_shared/",
       "cacheVariables": {
@@ -42,8 +42,8 @@
     },
     {
       "name": "Default Release",
-      "displayName": "Default Ninja Config - Release, shared libs",
-      "description": "Default debug build using Ninja generator",
+      "displayName": "Default Ninja Config - Release",
+      "description": "Default release build using Ninja generator",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build_release/",
       "cacheVariables": {
