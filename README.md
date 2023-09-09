@@ -8,3 +8,11 @@ These options are passed at configuration time for the project using the depende
 ```bash
 cmake -S . -B build_shared -D BUILD_SHARED_LIBS=TRUE
 ```
+
+Also be configured via the provided CMake presets:
+```bash
+cmake --preset "configure preset name"
+cmake --build --preset "build preset name"
+```
+
+WHere the `configure` and `build` presets are those present in the `CMakePresets.json`.
